@@ -33,7 +33,7 @@ def area(a, b, c):
     # Z drugiej strony jeżeli mamy pewność że dane nie potrzebują sprawdzania
     # to wyłączenie assert może przyspieszyć działanie programu.
     #
-    # Instrukcja assert expression jest równoważne takiemu fragmentowi kodu::
+    # Instrukcja assert expression jest równoważna takiemu fragmentowi kodu::
     #
     #    if __debug__:
     #        if not expression: raise AssertionError
