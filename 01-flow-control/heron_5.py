@@ -16,28 +16,30 @@ from math import sqrt
 def area(a, b, c):
     """
     Obliczanie powierzchni trójkąta za pomocą wzoru Herona.
-    
-    Dane: 
+
+    Dane:
         a, b, c - długości boków trójkąta.
-    Wynik: 
-        pole powierzchni trójkąta lub None jeżeli trójkąt
-        o podanych bokach nie istnieje.
+    Wynik:
+        pole powierzchni trójkąta.
+    Wyjątki:
+        jeżeli trójkąt o podanych długościach boków nie istnieje i są
+        sprawdzane asercje, to zgłaszany jest wyjątek AssertionError.
     """
-    
-    # UWAGA: assert jest gorszym rozwiązaniem niż sprawdzanie instrukcją if 
+
+    # UWAGA: assert jest gorszym rozwiązaniem niż sprawdzanie instrukcją if
     # wyjątku ValueError. Assert może nie zadziałać - bo jest możliwość
     # wyłączania - dla przyspieszenia programu - działania instrukcji Assert.
     # Z drugiej strony jeżeli mamy pewność że dane nie potrzebują sprawdzania
-    # to wyłączenie assert może przyspieszyć działanie programu. 
+    # to wyłączenie assert może przyspieszyć działanie programu.
     #
     # Instrukcja assert expression jest równoważne takiemu fragmentowi kodu::
     #
     #    if __debug__:
     #        if not expression: raise AssertionError
-    
+
     assert a > 0 and b > 0 and c > 0
     assert a < b + c and b < a + c and c < a + b
-        
+
     p = (a + b + c) / 2
     s = sqrt(p * (p - a) * (p - b) * (p - c))
     return s
