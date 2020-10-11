@@ -16,12 +16,12 @@ from math import sqrt
 def area(a, b, c):
     """
     Obliczanie powierzchni trójkąta za pomocą wzoru Herona.
-    
-    Dane: 
+
+    Dane:
         a, b, c - długości boków trójkąta.
-    Wynik: 
-        pole powierzchni trójkąta lub None jeżeli trójkąt
-        o podanych bokach nie istnieje.
+    Wynik:
+        pole powierzchni trójkąta lub None jeżeli trójkąt o podanych bokach
+        i niezerowej powierzchnni nie istnieje.
     """
     s = None
     if a > 0 and b > 0 and c > 0:
